@@ -5,7 +5,8 @@ import { Observable, map } from "rxjs";
 import { Order, OrderLine, Product } from "./entities";
 
 
-const baseUrl = 'http://localhost:4600';
+// const baseUrl = 'http://localhost:4600';
+const baseUrl = '/api';
 
 const apiUrls = {
   products: `${baseUrl}/products`,

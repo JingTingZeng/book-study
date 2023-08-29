@@ -1,19 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { DataSource } from './data/dataSource';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'my-app';
   names: string[] = ['Bob', 'Alice', 'Dora'];
-
-  constructor(private data: DataSource) {
-
-  }
-  ngOnInit(): void {
-    this.data.gettest();
-  }
 }

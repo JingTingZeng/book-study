@@ -1,0 +1,5 @@
+<ng-container *ngFor="let item of categories">
+  <button class="btn {{item === selected ? 'btn-primary' : 'btn-secondary'}}" (click)="selectCategory.emit(item)">
+    {{item}}
+  </button>
+</ng-container>

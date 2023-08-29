@@ -9,13 +9,7 @@ export abstract class DataSourceImplement {
   abstract loadProducts$(): Observable<Product[]>;
   abstract storeOrder$(order: Order): Observable<number>;
 
-  constructor(private http: HttpClient) {
-
-  }
-
-  getDataTest() {
-    this.http.get<Product[]>('http://localhost:4600/products').subscribe(console.log)
-  }
+  constructor(httpClient: HttpClient) { }
 
 }
 
@@ -30,10 +24,6 @@ export class DataSource {
     this.categories = new Set<string>();
     this.order = new Order();
     this.getData();
-  }
-
-  gettest() {
-    this.implement.getDataTest();
   }
 
   getProducts(sortProp: ProductProp = 'id', category?: string): Product[] {
